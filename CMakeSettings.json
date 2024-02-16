@@ -1,0 +1,74 @@
+﻿{
+  "configurations": [
+
+
+    {
+      "name": "win64-msvc-debug",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "configurationType": "Debug",
+      "generator": "Ninja",
+      "buildRoot": "${projectDir}/build/${name}",
+      "installRoot": "${projectDir}/install/${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "cmakeToolchain": "${env.VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+    },
+    {
+      "name": "win64-msvc-release",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "configurationType": "RelWithDebInfo",
+      "generator": "Ninja",
+      "buildRoot": "${projectDir}/build/${name}",
+      "installRoot": "${projectDir}/install/${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "cmakeToolchain": "${env.VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+    },
+    {
+      "name": "win64-llvm-debug",
+      "inheritEnvironments": [ "clang_cl_x64_x64" ],
+      "configurationType": "Debug",
+      "variables": [
+        {
+          "name": "CMAKE_C_COMPILER",
+          "value": "clang.exe"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "clang++.exe"
+        }
+      ],
+      "generator": "Ninja",
+      "buildRoot": "${projectDir}/build/${name}",
+      "installRoot": "${projectDir}/install/${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "cmakeToolchain": "${env.VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+    },
+    {
+      "name": "win64-llvm-release",
+      "inheritEnvironments": [ "clang_cl_x64_x64" ],
+      "configurationType": "RelWithDebInfo",
+      "variables": [
+        {
+          "name": "CMAKE_C_COMPILER",
+          "value": "clang.exe"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "clang++.exe"
+        }
+      ],
+      "generator": "Ninja",
+      "buildRoot": "${projectDir}/build/${name}",
+      "installRoot": "${projectDir}/install/${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "cmakeToolchain": "${env.VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+    }
+  ]
+}
