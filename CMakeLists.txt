@@ -12,7 +12,7 @@ set(INC
 
 )
 
-add_executable(${PROJECT_NAME} ${SRC} ${INC} "src/UltimateDelay.h"   "src/uops/include/MicroArchitecture.h" "src/uops/include/MicroArchitectureIdentifier.h" "src/uops/src/MicroArchitectureIdentifier.cpp")
+add_executable(${PROJECT_NAME} ${SRC} ${INC})
 
 add_subdirectory(src/uops)
 
